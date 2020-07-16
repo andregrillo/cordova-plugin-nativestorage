@@ -396,8 +396,9 @@ StorageHandle.prototype.getItem = function(reference, success, error) {
   this.storageHandlerDelegate(
     function(data) {
       try {
-        obj = JSON.parse(data);
-        success(obj);
+        //obj = JSON.parse(data);
+        //success(obj);
+        success(data);
       } catch (err) {
         error(new NativeStorageError(NativeStorageError.JSON_ERROR, "JS", err));
       }
